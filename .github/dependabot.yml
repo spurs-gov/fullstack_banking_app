@@ -1,0 +1,106 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically assign reviewers
+    reviewers:
+      - "octocat"
+    # Automatically assign labels
+    labels:
+      - "npm"
+      - "dependencies"
+    # Automatically merge pull requests when CI passes
+    automerge: true
+    # Automatically rebase pull requests
+    rebase-strategy: "auto"
+
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically assign reviewers
+    reviewers:
+      - "octocat"
+    # Automatically assign labels
+    labels:
+      - "maven"
+      - "dependencies"
+    # Automatically merge pull requests when CI passes
+    automerge: true
+    # Automatically rebase pull requests
+    rebase-strategy: "auto"
+
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically assign reviewers
+    reviewers:
+      - "octocat"
+    # Automatically assign labels
+    labels:
+      - "gradle"
+      - "dependencies"
+    # Automatically merge pull requests when CI passes
+    automerge: true
+    # Automatically rebase pull requests
+    rebase-strategy: "auto"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically assign reviewers
+    reviewers:
+      - "octocat"
+    # Automatically assign labels
+    labels:
+      - "pip"
+      - "dependencies"
+    # Automatically merge pull requests when CI passes
+    automerge: true
+    # Automatically rebase pull requests
+    rebase-strategy: "auto"
+
+  # Open pull requests to update lockfiles
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically update lockfiles
+    versioning-strategy: lockfile-only
+    # Prefix all commit messages with "npm"
+    commit-message:
+      prefix: "npm"
+
+  - package-ecosystem: "maven"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically update lockfiles
+    versioning-strategy: lockfile-only
+    # Prefix all commit messages with "maven"
+    commit-message:
+      prefix: "maven"
+
+  - package-ecosystem: "gradle"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically update lockfiles
+    versioning-strategy: lockfile-only
+    # Prefix all commit messages with "gradle"
+    commit-message:
+      prefix: "gradle"
+
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Automatically update lockfiles
+    versioning-strategy: lockfile-only
+    # Prefix all commit messages with "pip"
+    commit-message:
+      prefix: "pip"
